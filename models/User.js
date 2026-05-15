@@ -23,6 +23,11 @@ const userSchema = new mongoose.Schema({
     },
     refferalcode: {
         type: String,
+        required:false
+    },
+    token:{
+        type:String,
+        required:false
     }
 
 });

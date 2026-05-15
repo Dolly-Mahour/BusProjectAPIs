@@ -6,16 +6,21 @@ const {
     getUsers,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    loginUser
 } = require("../controllers/userController");
 
 
 // GET API
 router.get("/", getUsers);
 
+router.post("/login", loginUser);
 
 // POST API
 router.post("/", createUser);
+
+
+
 router.put("/:id", updateUser);
 
 router.delete("/:id", deleteUser);
