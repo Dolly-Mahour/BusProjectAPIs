@@ -6,13 +6,15 @@ const {
     getBusTrips,
     createBusTrips,
     updateBusTrips,
-    deleteBusTrips
+    deleteBusTrips,
+    searchBusTrips
 } = require("../controllers/tripSearchController");
 
 
 // GET API
 router.get("/", getBusTrips);
 
+router.post("/searchtrips", searchBusTrips);
 
 // POST API
 router.post("/", createBusTrips);

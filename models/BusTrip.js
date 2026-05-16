@@ -8,7 +8,11 @@ const busTripsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    date: {
+    fromDate: {
+        type: Date,
+        required: true
+    },
+    toDate: {
         type: Date,
         required: true
     },
@@ -29,7 +33,7 @@ const busTripsSchema = new mongoose.Schema({
         required: true
     },
     type: {
-        type: Boolean,
+        type: String,
         required: true
     },
     totalSeats: {
