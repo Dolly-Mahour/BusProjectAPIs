@@ -43,9 +43,9 @@ const searchBusTrips = async (req, res) => {
 
     try {
         const { from, to } = req.body;
-        const buses = await BusTrips.find({from: { $regex: from, $options: "i" },
+        const buses = await BusTrips.find({
+            from: { $regex: from, $options: "i" },
             to: { $regex: to, $options: "i" },
-            // fromDate: fromDate
         });
 
         res.status(200).json(buses);
