@@ -52,7 +52,7 @@ const updatePlace = async (req, res) => {
             { new: true }
         );
 
-        res.status(201).json(place);
+        res.status(200).json(place);
 
     } catch (error) {
 
@@ -70,7 +70,7 @@ const deletePlace = async (req, res) => {
 
         const place = await Place.findByIdAndDelete(req.params.id);
 
-        res.status(201).json(place);
+        res.status(200).json(place);
 
     } catch (error) {
 

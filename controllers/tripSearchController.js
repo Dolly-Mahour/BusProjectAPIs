@@ -26,7 +26,7 @@ const createBusTrips = async (req, res) => {
 
         const trips = await BusTrips.create(req.body);
 
-        res.status(200).json(trips);
+        res.status(201).json(trips);
 
     } catch (error) {
 
@@ -71,7 +71,7 @@ const updateBusTrips = async (req, res) => {
             { new: true }
         );
 
-        res.status(201).json(trips);
+        res.status(200).json(trips);
 
     } catch (error) {
 
@@ -89,7 +89,7 @@ const deleteBusTrips = async (req, res) => {
 
         const trips = await BusTrips.findByIdAndDelete(req.params.id);
 
-        res.status(201).json(trips);
+        res.status(200).json(trips);
 
     } catch (error) {
 
